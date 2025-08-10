@@ -74,19 +74,12 @@ public class Address {
     - Modelo relacional y clases coinciden uno a uno.
     - Modelo de clases y modelo relacional evolucionan de la mano.
     - Eloquent, Rails, Django.
+    - Sin persistencia por alcance
 - Data Mapper:
     - Un layer adicional transforma un modelo de objetos en el modelo relacional.
     - Brinda ortogonalidad, transparencia en la persistencia.
     - Modelo de objetos y relacional pueden evolucionar en forma independiente.
     - Hibernate, Doctrine (PHP).
-
-  | Concepto                        | Active Record | Comentario                                                     |
-                                                                                          |---------------------------------|---------------|----------------------------------------------------------------|
-  | **Cascade** (persistencia)      | ⚠️ Limitado   | Solo para borrado y, en algunos casos, con `autosave`; no como |
-  | en Hibernate.                   |               |                                                                |
-  | **Persistence by Reachability** | ❌ No          | Requiere `save()` explícito o configuración especial.          |
-  | **Eager Loading**               | ✅ Sí          | `includes` (Rails), `with` (Eloquent).                         |
-  | **Lazy Loading**                | ✅ Sí          | Relación cargada al acceder.                                   |
 
 - Un ejemplo de Eloquent (Laravel) que ilustra el concepto de Active Record:
 
