@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/README.md" />
+              <option name="originalContent" value="# Taller - JPA y Hibernate&#10;&#10;Este repo sirve de demo de configuración de JPA, Hibernate y Derby DB.&#10;" />
+              <option name="updatedContent" value="# Taller - JPA y Hibernate&#10;&#10;Este repo sirve de demo de configuración de JPA, Hibernate y Derby DB.&#10;&#10;# Documentación de los Mapeos JPA/Hibernate&#10;&#10;A continuación se describen los mapeos de entidades y relaciones presentes en el paquete `bd2.mappings`:&#10;&#10;## Address&#10;- Clase embebible (`@Embeddable`).&#10;- Utilizada para representar una dirección dentro de otra entidad (por ejemplo, en `Persona`).&#10;&#10;## Persona&#10;- Entidad principal (`@Entity`).&#10;- Posee un identificador (`@Id`).&#10;- Relación uno a muchos con `Telefono` (`@OneToMany`), con cascada y carga perezosa.&#10;- Dirección embebida (`@Embedded`, clase `Address`).&#10;- Relación muchos a uno con `Dni` (`@ManyToOne`).&#10;&#10;## Telefono&#10;- Entidad simple (`@Entity`).&#10;- Posee identificador autogenerado (`@Id`, `@GeneratedValue`).&#10;- Relacionada con `Persona` mediante la relación uno a muchos.&#10;&#10;## Dni&#10;- Entidad (`@Entity`).&#10;- Posee identificador autogenerado (`@Id`, `@GeneratedValue`).&#10;- Relacionada con `Persona` mediante la relación muchos a uno.&#10;&#10;## CuentaBancaria, CajaDeAhorro y CuentaCorriente&#10;- `CuentaBancaria` es una entidad base con herencia (`@Inheritance`).&#10;- Usa discriminador para distinguir subtipos (`@DiscriminatorColumn`).&#10;- `CajaDeAhorro` y `CuentaCorriente` heredan de `CuentaBancaria` y usan `@DiscriminatorValue`.&#10;&#10;## Post y PostComment&#10;- `Post` es una entidad (`@Entity`) con identificador autogenerado.&#10;- Relación uno a muchos con `PostComment` (`@OneToMany`, cascada total).&#10;- `PostComment` es una entidad con relación muchos a uno hacia `Post` (`@ManyToOne`).&#10;&#10;Estas clases demuestran el uso de anotaciones JPA para definir entidades, relaciones uno a muchos, muchos a uno, herencia y objetos embebidos." />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
