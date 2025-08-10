@@ -80,13 +80,13 @@ public class Address {
     - Modelo de objetos y relacional pueden evolucionar en forma independiente.
     - Hibernate, Doctrine (PHP).
 
-  | Concepto | Active Record | Comentario |
-                                                                                        |----------------------------------|---------------|------------|
-  | **Cascade** (persistencia)       | ⚠️ Limitado | Solo para borrado y, en algunos casos, con `autosave`; no como
-    en Hibernate. |
-  | **Persistence by Reachability**  | ❌ No | Requiere `save()` explícito o configuración especial. |
-  | **Eager Loading**                | ✅ Sí | `includes` (Rails), `with` (Eloquent). |
-  | **Lazy Loading**                 | ✅ Sí | Relación cargada al acceder. |
+  | Concepto                        | Active Record | Comentario                                                     |
+                                                                                          |---------------------------------|---------------|----------------------------------------------------------------|
+  | **Cascade** (persistencia)      | ⚠️ Limitado   | Solo para borrado y, en algunos casos, con `autosave`; no como |
+  | en Hibernate.                   |               |                                                                |
+  | **Persistence by Reachability** | ❌ No          | Requiere `save()` explícito o configuración especial.          |
+  | **Eager Loading**               | ✅ Sí          | `includes` (Rails), `with` (Eloquent).                         |
+  | **Lazy Loading**                | ✅ Sí          | Relación cargada al acceder.                                   |
 
 - Un ejemplo de Eloquent (Laravel) que ilustra el concepto de Active Record:
 
