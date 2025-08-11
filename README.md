@@ -12,51 +12,15 @@
 
 # JPA: Objetos Persistentes
 
-## Entidades
-
-Es obligatorio tener un constructor vacío (lo ponemos protegido) y setters y getters (privados).
-
-```java
-
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String nombre;
-    ...
-
-    //no-arg constructor requerido
-    protected Persona() {
-    }
-    ...
-
-    //get-set privados
-}
-```
-
-## Componentes
-
-No requieren definir un id en el `embeddable`.
-
-```java
-
-@Entity
-public class Person {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String nombre;
-    @Embedded
-    private Address address;
-}
-
-@Embeddable
-public class Address {
-    private String address;
-    ...
-}
-```
+- Cuestiones esenciales:
+    - En JPA, los objetos persistentes requieren constructores sin argumentos (protected) y setters/getters (privados)
+    - Usamos Lombok para simplificar esto que se requiere para JPA.
+- package `orm.context`: Describe como utilizar `EntityManagerFactory`, `EntityManager` y `EntityTransaction`.
+- package `orm.mappings`: Describe ejempos con los posibles mapeos entre un modelo de objetos un modelo relacional.
+- package `orm.cascade`: Describe los diferentes forma de usar persistencia por alcance.
+- package `orm.retrieval`: Describe las diferentes formas de recuperar objetos persistentes.
+    - `find()` vs `getReference()`
+    - JPQL: Java Persistence Query Language
 
 # Ciclo de Vida de los Objetos Persistentes
 
