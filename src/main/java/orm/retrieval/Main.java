@@ -3,6 +3,8 @@ package orm.retrieval;
 import jakarta.persistence.EntityManagerFactory;
 import orm.utils.EmfBuilder;
 
+import java.time.LocalDateTime;
+
 public class Main {
     public static void main(String[] args) {
         var emf = new EmfBuilder().addClass(Autor.class)
@@ -38,7 +40,7 @@ public class Main {
         System.out.println(libro.autores());
 
         //Detached: Solunciones
-        var libro2 = emf.callInTransaction((em) -> {
+        Libro libro2 = emf.callInTransaction((em) -> {
             var l = em.find(Libro.class, "abcd-1234");
             // libro es persistent ahora
 
@@ -59,10 +61,12 @@ public class Main {
         emf.runInTransaction((em) -> {
             var antonio = new Autor("Antonio", "Zarate");
             var jose = new Autor("Jose", "Malvino");
-            var libro = new Libro("abcd-1234", "La casa y el bosque");
+            var libro = new Libro("abcd-1234", "La casa y el bosque", LocalDateTime.of(2024, 02, 8, 10, 30));
+            var otroLibro = new Libro("zwqa-5678", "El mono y la jirafa", LocalDateTime.of(2025, 02, 8, 10, 30));
             libro.agregarAutor(antonio);
             libro.agregarAutor(jose);
             em.persist(libro);
+            em.persist(otroLibro);
         });
     }
 

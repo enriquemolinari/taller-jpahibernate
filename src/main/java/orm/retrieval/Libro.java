@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -17,15 +18,17 @@ public class Libro {
     @Id
     private String isbn;
     private String titulo;
+    private LocalDateTime fechaPublicacion;
 
     //, fetch = FetchType.EAGER
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     @JoinColumn(name = "isbn")
     private List<Autor> autores;
 
-    public Libro(String isbn, String titulo) {
+    public Libro(String isbn, String titulo, LocalDateTime fechaPublicacion) {
         this.isbn = isbn;
         this.titulo = titulo;
+        this.fechaPublicacion = fechaPublicacion;
         this.autores = new java.util.ArrayList<>();
     }
 
@@ -58,5 +61,12 @@ public class Libro {
 
     public void removerAutorDeNombre(String unNombre) {
         this.autores.removeIf(autor -> autor.conNombre(unNombre));
+    }
+
+    @Override
+    public String toString() {
+        return "Libro {" +
+                "titulo='" + titulo + '\'' +
+                '}';
     }
 }
