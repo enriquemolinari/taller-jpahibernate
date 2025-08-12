@@ -35,16 +35,19 @@ public class Main {
             // libro es persistent ahora
         });
         // libro esta en estado detached ahora. Que pasa con esto?
-        //System.out.println(libro.autores());
+        System.out.println(libro.autores());
 
-        //Detached
+        //Detached: Solunciones
         var libro2 = emf.callInTransaction((em) -> {
             var l = em.find(Libro.class, "abcd-1234");
             // libro es persistent ahora
 
             //opciones para inicializar atributos lazy
-            //Hibernate.initialize(l.autores()); // no me gusta demasiado
-            //TODO: agregar otras
+            //1. Hibernate.initialize(l.autores()); // no me gusta demasiado
+            //2. Cambiar Fetch en el mapeo. Pero queda para siempre asi, no importa el caso de uso.
+            //3. Query, segun si lo necesito fetcheo o no.
+            //4. toRecord method
+            //return l.toRecord();
             return l;
         });
         // libro esta en estado detached ahora. Que pasa con esto?

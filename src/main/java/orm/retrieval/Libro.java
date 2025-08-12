@@ -18,6 +18,7 @@ public class Libro {
     private String isbn;
     private String titulo;
 
+    //, fetch = FetchType.EAGER
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     @JoinColumn(name = "isbn")
     private List<Autor> autores;
@@ -26,6 +27,10 @@ public class Libro {
         this.isbn = isbn;
         this.titulo = titulo;
         this.autores = new java.util.ArrayList<>();
+    }
+
+    InfoLibroYAutores toRecord() {
+        return new InfoLibroYAutores(this.titulo, this.autores());
     }
 
     public void agregarAutor(Autor autor) {
