@@ -20,7 +20,9 @@
 - package `orm.cascade`: Describe los diferentes forma de usar persistencia por alcance.
 - package `orm.retrieval`: Describe las diferentes formas de recuperar objetos persistentes.
     - `find()` vs `getReference()`
-    - JPQL: Java Persistence Query Language
+    - Lazy vs Early: Relaciones uno a muchos o muchos a muchos son lazy por defecto. Cualquier otro caso es early a
+      menos que se especifique lo contrario.
+- package `orm.queries`: JPQL: Java Persistence Query Language
 
 # Ciclo de Vida de los Objetos Persistentes
 
