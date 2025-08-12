@@ -16,12 +16,14 @@
     - En JPA, los objetos persistentes requieren constructores sin argumentos (protected) y setters/getters (privados)
     - Usamos Lombok para simplificar esto que se requiere para JPA.
 - package `orm.context`: Describe como utilizar `EntityManagerFactory`, `EntityManager` y `EntityTransaction`.
+    - Estados: Transient -> Persistent.
 - package `orm.mappings`: Describe ejempos con los posibles mapeos entre un modelo de objetos un modelo relacional.
 - package `orm.cascade`: Describe los diferentes forma de usar persistencia por alcance.
-- package `orm.retrieval`: Describe las diferentes formas de recuperar objetos persistentes.
+- package `orm.retrieval`: Describe las diferentes formas de recuperar objetos persistentes por Id.
     - `find()` vs `getReference()`
     - Lazy vs Early: Relaciones uno a muchos o muchos a muchos son lazy por defecto. Cualquier otro caso es early a
       menos que se especifique lo contrario.
+    - Estados: Persistent -> Detached.
 - package `orm.queries`: JPQL: Java Persistence Query Language
 
 # Ciclo de Vida de los Objetos Persistentes

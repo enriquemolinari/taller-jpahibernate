@@ -16,7 +16,9 @@ public class MainSimplificado {
 
         emf.runInTransaction((em) -> {
             var antonio = new Autor("Antonio", "Zarate");
+            //antonio es transient ahora
             em.persist(antonio);
+            //antonio es persistent ahora
             var libro = new Libro("abcd-1234", "La casa y el bosque");
             em.persist(libro);
         });

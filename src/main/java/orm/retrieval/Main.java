@@ -29,6 +29,27 @@ public class Main {
             libro.agregarAutor(autor);
         });
 
+        //Detached
+        var libro = emf.callInTransaction((em) -> {
+            return em.find(Libro.class, "abcd-1234");
+            // libro es persistent ahora
+        });
+        // libro esta en estado detached ahora. Que pasa con esto?
+        //System.out.println(libro.autores());
+
+        //Detached
+        var libro2 = emf.callInTransaction((em) -> {
+            var l = em.find(Libro.class, "abcd-1234");
+            // libro es persistent ahora
+
+            //opciones para inicializar atributos lazy
+            //Hibernate.initialize(l.autores()); // no me gusta demasiado
+            //TODO: agregar otras
+            return l;
+        });
+        // libro esta en estado detached ahora. Que pasa con esto?
+        System.out.println(libro2.autores());
+
     }
 
     static void cargoDatos(EntityManagerFactory emf) {
