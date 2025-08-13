@@ -16,7 +16,8 @@ public class Libro {
     @Id
     private String isbn;
     private String titulo;
-    @ManyToOne
+    //@OneToOne: el id_autor va en Libro y con restriccion de unidad
+    @ManyToOne //el id_autor va en Libro, sin restriccion de unicidad
     private Autor autor;
 
     public Libro(String isbn, String titulo, Autor autor) {

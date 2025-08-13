@@ -24,6 +24,12 @@
 - package `orm.context`: Describe como utilizar `EntityManagerFactory`, `EntityManager` y `EntityTransaction`.
     - Estados: Transient -> Persistent.
 - package `orm.mappings`: Describe ejempos con los posibles mapeos entre un modelo de objetos un modelo relacional.
+    - `orm.mappings.manytoone`: Relaciones uno a uno y muchos a uno. Solo cambia una restricción de unidad.
+    - `orm.mappings.onetomany`: Es importante usar el JoinColumn para que no genere una tabla intermedia.
+    - `orm.mappings.componentes`: Embebiendo objetos.
+    - `orm.mappings.manytomanybidireccional`: Muchos a muchos bidireccional.
+    - `orm.mappings.bidireccional`: Muchos a muchos bidireccional con datos adicionales en relación.
+    - `orm.mappings.herecencia`: Single Table.
 - package `orm.cascade`: Describe los diferentes forma de usar persistencia por alcance.
 - package `orm.retrieval`: Describe las diferentes formas de recuperar objetos persistentes por Id.
     - `find()` vs `getReference()`
