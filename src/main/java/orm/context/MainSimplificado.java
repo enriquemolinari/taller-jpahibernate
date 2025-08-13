@@ -21,6 +21,7 @@ public class MainSimplificado {
             //antonio es persistent ahora
             var libro = new Libro("abcd-1234", "La casa y el bosque");
             em.persist(libro);
+            //libro es persistent ahora
         });
     }
 
