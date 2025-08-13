@@ -22,10 +22,6 @@ public class EmfBuilder {
                 .property(JdbcSettings.HIGHLIGHT_SQL, true)
                 .property(PersistenceConfiguration.JDBC_URL,
                         CLIENT_DB_URL)
-//                .property("hibernate.cache.use_second_level_cache", true)
-//                .property("hibernate.cache.use_query_cache", true)
-//                .property("hibernate.cache.region.factory_class", "jcache")
-//                .property("hibernate.javax.cache.uri", "ehcache.xml")
                 .property(PersistenceConfiguration.SCHEMAGEN_DATABASE_ACTION,
                         Action.CREATE_DROP);
     }
