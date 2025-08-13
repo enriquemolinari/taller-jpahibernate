@@ -12,6 +12,11 @@
 
 # JPA: Objetos Persistentes
 
+- Que es JPA: Java Persistence API.
+    - Hibernate es una implementación de JPA.
+    - ORM: Object Relational Mapping. Nos ayuda con las diferencia de impedancia entre el modelo de objetos y el modelo
+      relacional.
+    - En Bases de datos Orientadas a Objetos (OODBMS) es todo super transparente, no es necesario mapear.
 - Cuestiones esenciales:
     - En JPA, los objetos persistentes requieren constructores sin argumentos (protected) y setters/getters (privados)
     - Usamos Lombok para simplificar esto que se requiere para JPA.
