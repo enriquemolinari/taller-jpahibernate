@@ -14,12 +14,12 @@ import lombok.Setter;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class LibroElectronico extends Libro {
     private String formato;
-    private String peso;
+    private String pesoDescarga;
 
-    public LibroElectronico(String isbn, String titulo, String formato, String peso) {
+    public LibroElectronico(String isbn, String titulo, String formato, String pesoDescarga) {
         super(isbn, titulo);
         this.formato = formato;
-        this.peso = peso;
+        this.pesoDescarga = pesoDescarga;
     }
 
     public String formato() {
@@ -27,6 +27,6 @@ public class LibroElectronico extends Libro {
     }
 
     public String peso() {
-        return this.peso;
+        return this.pesoDescarga;
     }
 }
