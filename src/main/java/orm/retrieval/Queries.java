@@ -43,7 +43,10 @@ public class Queries {
 
         //usamos join
         emf.runInTransaction((em) -> {
+            //join no popula la collection de autores
             var query = em.createQuery("from Libro l join l.autores", Libro.class);
+            //join fetch popula la collection de autores
+            //var query = em.createQuery("from Libro l join fetch l.autores", Libro.class);
             var objects = query.getResultList();
             objects.forEach(System.out::println);
         });

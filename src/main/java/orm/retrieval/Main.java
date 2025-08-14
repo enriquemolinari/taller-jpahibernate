@@ -40,7 +40,7 @@ public class Main {
         System.out.println(libro.autores());
 
         //Detached: Solunciones
-        Libro libro2 = emf.callInTransaction((em) -> {
+        var libro2 = emf.callInTransaction((em) -> {
             var l = em.find(Libro.class, "abcd-1234");
             // libro es persistent ahora
 

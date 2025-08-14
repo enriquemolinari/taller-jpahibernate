@@ -14,6 +14,7 @@ public class ClassicEmf {
         PersistenceConfiguration config = new PersistenceConfiguration("ejemplo")
                 //agrego las clases persistentes
                 .managedClass(Libro.class)
+                .managedClass(Autor.class)
                 // connexion a la bd
                 .property(PersistenceConfiguration.JDBC_URL, IN_MEMORY_DB_URL)
                 .property(PersistenceConfiguration.JDBC_USER, DB_USER)
@@ -31,6 +32,7 @@ public class ClassicEmf {
                         Action.CREATE_DROP);
 
         var entityManagerFactory = config.createEntityManagerFactory();
+
         var entityManager = entityManagerFactory.createEntityManager();
         var transaction = entityManager.getTransaction();
         try {
