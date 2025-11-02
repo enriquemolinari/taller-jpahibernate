@@ -1,10 +1,13 @@
-package orm.locking.viaje.pesimista;
+package orm.locking.viaje.optimista;
 
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.OptimisticLockException;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.function.Function;
 
 //Clase que representa la empresa de transporte.
 //asumamos que solo tiene 1 colectivo
@@ -30,23 +33,24 @@ public class EmpresaComarca {
     }
 
     public void comprarButacaEnViaje(Long viajeId, String numeroButaca, String nombrePasajero) {
-        emf.callInTransaction((em -> {
+        executeAndCheckOptimisticLockIfFail(em -> {
             var viaje = em.find(Viaje.class, viajeId);
-            var butaca = em.createQuery("select b FROM Viaje v join v.butacas b " +
-                            "WHERE v.id = :viajeId AND b.numeroButaca = :numero", Butaca.class)
-                    .setParameter("viajeId", viajeId)
-                    .setParameter("numero", numeroButaca)
-                    //genera un "select for update"
-                    .setLockMode(jakarta.persistence.LockModeType.PESSIMISTIC_WRITE)
-                    //getSingleResultOrNull() es nuevo en Hiberante 7.
-                    // Que hubiera sido mejor que esto? porque no lo hicieron?
-                    .getSingleResultOrNull();
-            if (butaca == null) {
-                throw new IllegalArgumentException("Butaca no encontrada: " + numeroButaca);
-            }
-            var pasaje = viaje.comprarButaca(butaca, nombrePasajero);
+            var pasaje = viaje.comprarButaca(numeroButaca, nombrePasajero);
             em.persist(pasaje);
             return pasaje;
-        }));
+        }, numeroButaca);
+    }
+
+    private void executeAndCheckOptimisticLockIfFail(Function<EntityManager, Pasaje> comprarButaca,
+                                                     String numeroButaca) {
+        try {
+            emf.callInTransaction(comprarButaca);
+        } catch (Exception e) {
+            if (e.getCause() instanceof OptimisticLockException) {
+                throw new RuntimeException("No se pudo comprar la butaca " + numeroButaca +
+                        " porque otro usuario la consiguió justo antes. Por favor, seleccione otra.");
+            }
+            throw new RuntimeException(e);
+        }
     }
 }
