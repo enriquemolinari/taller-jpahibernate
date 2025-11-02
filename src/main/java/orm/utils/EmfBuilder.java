@@ -10,6 +10,9 @@ public class EmfBuilder {
     public static final String DB_PWD = "app";
     public static final String IN_MEMORY_DB_URL = "jdbc:derby:memory:ejemplo;create=true";
     public static final String CLIENT_DB_URL = "jdbc:derby://localhost:1527/ejemplo;create=true";
+    public static final String CLIENT_PG_DB_URL = "jdbc:postgresql://localhost:5432/postgres";
+    public static final String PG_DB_USER = "postgres";
+    public static final String PG_DB_PWD = "mysecretpassword";
     private EntityManagerFactory emf;
     private PersistenceConfiguration config;
 
@@ -24,6 +27,16 @@ public class EmfBuilder {
                         CLIENT_DB_URL)
                 .property(PersistenceConfiguration.SCHEMAGEN_DATABASE_ACTION,
                         Action.CREATE_DROP);
+    }
+
+    public EmfBuilder postgreSqlCredentials() {
+        config.property(PersistenceConfiguration.JDBC_URL,
+                CLIENT_PG_DB_URL);
+        config.property(PersistenceConfiguration.JDBC_USER,
+                PG_DB_USER);
+        config.property(PersistenceConfiguration.JDBC_PASSWORD,
+                PG_DB_PWD);
+        return this;
     }
 
     public EmfBuilder addClass(Class<?> clazz) {

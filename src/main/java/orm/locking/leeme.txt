@@ -41,7 +41,10 @@ fallar por OptimisticLock.
 - OPTIMISTIC_FORCE_INCREMENT: 
 -- Sirve para cuando queres mantener versionada una entidad padre, incrementando su version,
 al cambiar un hijo.
-  
+
+- synchronized de java, con debug de intellij no funcion porque el debug levanta JVMs nuevas.
+- El synchronized fuciona dentro de una misma JVM.
+
 Otro tema:
   
 Si llamo a un setter para modificar algo de un objeto, pero le pongo el mismo valor que tenia, 

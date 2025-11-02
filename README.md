@@ -105,3 +105,30 @@ $user->posts()->save($post);
 // O directamente:
 $user->posts()->create(['title' => 'Nuevo Post']);
 ```
+
+# Concurrencia
+
+¿ Cómo manejar múltiples usuarios accediendo y modificando los mismos datos al mismo tiempo?
+
+- **Pesimista**: Lockeando recursos al leerlos, liberar luego de commitear. Otros usuarios deben esperar.
+- **Optimista**: Asumiendo que los conflictos son raros y manejándolos al momento de hacer commit.
+
+- **Gestión de la concurrencia dentro de una transacción**:
+    - Niveles de Aislamiento en Bases de Datos Relacionales:
+        - **READ UNCOMMITTED**: permite dirty reads.
+        - **READ COMMITTED**: permite lost updates. (default en la mayoría de los SGBD)
+        - **REPEATABLE READ**: previene lost updates. Permite Phantom Read (default en MySQL InnoDB y Oracle)
+          -- Optiminista usando MVCC (Multi Version Concurrency Control).
+        - **SERIALIZABLE**: previene Phantom Reads.
+    - Puedo prevenir lost updates en READ COMMITTED:
+        - **Persimista**: Bloqueando filas al leerlas (SELECT ... FOR UPDATE). Lock.PESSIMISTIC_WRITE en JPA.
+        - **Optimista**: Agregando un campo `@Version` en la entidad. Hibernate se encarga de incrementar el valor en
+          cada actualización.
+- **Gestión de la concurrencia a nivel Aplicación** (Application Level transactions).
+    - Se da cuando un caso de uso se realiza utilizando 2 o más transacciones de base de datos.
+    - También conocido como read-modify-write pattern.
+    - Ejemplos de un CMS:
+        - Tx 1: Leo un blogpost de la BD, lo llevo a la UI.
+        - Think Time: El usuario lee, revisa, modifica, y finalmente presiona la acción para Guardar.
+        - Tx 2: Submitea post, update en BD.
+    - Dado que son dos transacciones separadas, necesito gestionar la concurrencia a nivel de aplicación.

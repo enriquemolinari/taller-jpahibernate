@@ -1,6 +1,11 @@
-package orm.locking;
+package orm.locking.nextnumber;
 
-import jakarta.persistence.*;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.TypedQuery;
+import orm.utils.EmfBuilder;
+
+import java.time.Year;
 
 public class Main {
 
@@ -14,15 +19,17 @@ public class Main {
         // update)
         // 4. Con la BD en read committed y lockeo optimista (version)
 
-        EntityManagerFactory emf = Persistence
-                .createEntityManagerFactory("jpa-pgsql");
+//        EntityManagerFactory emf = Persistence
+//                .createEntityManagerFactory("jpa-pgsql");
+        var emfBuilder = new EmfBuilder().postgreSqlCredentials().addClass(NextNumber.class);
+        var emf = emfBuilder.build();
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
         try {
             tx.begin();
 
-            int anioActual = 2024;
+            int anioActual = Year.now().getValue();
 
             TypedQuery<NextNumber> query = em.createQuery(
                     "from NextNumber where anio = :anioActual",
@@ -32,7 +39,7 @@ public class Main {
             // select for update
             // https://www.postgresql.org/docs/current/explicit-locking.html
             // select for key update is a bit weaker than select for update
-            query.setLockMode(LockModeType.PESSIMISTIC_WRITE);
+            //query.setLockMode(LockModeType.PESSIMISTIC_WRITE);
 
             NextNumber l = query.getSingleResult();
 

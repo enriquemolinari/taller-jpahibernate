@@ -1,4 +1,4 @@
-package orm.locking.optimisticjpa;
+package orm.locking.nextnumber.optimisticjpa;
 
 import jakarta.persistence.*;
 

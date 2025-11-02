@@ -1,4 +1,4 @@
-package orm.locking;
+package orm.locking.blogpost;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
