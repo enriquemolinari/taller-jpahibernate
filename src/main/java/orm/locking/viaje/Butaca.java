@@ -41,4 +41,8 @@ public class Butaca {
     public boolean estaOcupada() {
         return ocupada;
     }
+
+    public String numero() {
+        return numeroButaca;
+    }
 }

@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -36,10 +37,6 @@ public class Viaje {
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("Butaca no encontrada: " + numeroButaca));
 
-        if (butaca.estaOcupada()) {
-            throw new IllegalStateException("La butaca " + numeroButaca + " ya está ocupada.");
-        }
-
         butaca.ocupar(nombrePasajero);
 
         return new Pasaje(nombrePasajero, numeroButaca, this);
@@ -47,5 +44,9 @@ public class Viaje {
 
     public String fechaHoraSalida() {
         return fechaSalida.toString() + " " + horaSalida.toString();
+    }
+
+    public List<Butaca> butacas() {
+        return Collections.unmodifiableList(this.butacas);
     }
 }

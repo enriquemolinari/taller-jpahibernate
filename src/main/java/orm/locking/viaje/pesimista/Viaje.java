@@ -31,10 +31,6 @@ public class Viaje {
     }
 
     public Pasaje comprarButaca(Butaca butaca, String nombrePasajero) {
-        if (butaca.estaOcupada()) {
-            throw new IllegalStateException("La butaca " + butaca.numero() + " ya está ocupada.");
-        }
-
         butaca.ocupar(nombrePasajero);
 
         return new Pasaje(nombrePasajero, butaca.numero(), this);

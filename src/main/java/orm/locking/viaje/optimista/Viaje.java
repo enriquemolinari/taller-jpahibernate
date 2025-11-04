@@ -35,11 +35,7 @@ public class Viaje {
                 .filter(b -> b.esSuNumero(numeroButaca))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("Butaca no encontrada: " + numeroButaca));
-
-        if (butaca.estaOcupada()) {
-            throw new IllegalStateException("La butaca " + numeroButaca + " ya está ocupada.");
-        }
-
+        
         butaca.ocupar(nombrePasajero);
 
         return new Pasaje(nombrePasajero, numeroButaca, this);

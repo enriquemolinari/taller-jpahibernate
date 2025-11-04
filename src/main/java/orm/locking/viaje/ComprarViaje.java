@@ -17,6 +17,11 @@ public class ComprarViaje {
                 .build();
 
         var empresa = new EmpresaComarca(emf);
+
+//        empresa.listarButacasDeViaje(1L)
+//                .stream()
+//                .forEach(b -> System.out.println(b));
+
         empresa.comprarButacaEnViaje(1L, "1", args[0]);
     }
 }

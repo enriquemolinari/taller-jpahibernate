@@ -29,6 +29,13 @@ public class EmpresaComarca {
         }));
     }
 
+    public List<ButacaView> listarButacasDeViaje(Long viajeId) {
+        return emf.callInTransaction((em -> {
+            var viaje = em.find(Viaje.class, viajeId);
+            return viaje.butacas().stream().map(b -> new ButacaView(b.numero(), b.estaOcupada())).toList();
+        }));
+    }
+
     public void comprarButacaEnViaje(Long viajeId, String numeroButaca, String nombrePasajero) {
         emf.callInTransaction((em -> {
             var viaje = em.find(Viaje.class, viajeId);
@@ -36,5 +43,8 @@ public class EmpresaComarca {
             em.persist(pasaje);
             return pasaje;
         }));
+    }
+
+    record ButacaView(String numero, boolean ocupada) {
     }
 }
