@@ -12,6 +12,9 @@ public class Main {
             em.persist(antonio);
             var libro = new Libro("abcd-1234", "La casa y el bosque", antonio);
             em.persist(libro);
+
+            var libro2 = new Libro("abcd-1235", "La casa y el bosque 2", antonio);
+            em.persist(libro2);
         });
     }
 

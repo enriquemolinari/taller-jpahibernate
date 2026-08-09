@@ -1,9 +1,6 @@
 package orm.mappings.onetomany;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,12 +14,15 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Libro {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
     private String isbn;
     private String titulo;
     @OneToMany
     //para que no genere una tabla intermedia, se usa esta anotacion
-    //isbn es el nombre de la columna que colocara en la tabla para Autor
-    @JoinColumn(name = "isbn")
+    //id_libro es el nombre de la columna que colocara en la tabla para Autor para referencia a la PK id en libro
+    @JoinColumn(name = "id_libro")
     private List<Autor> autores;
 
     public Libro(String isbn, String titulo) {

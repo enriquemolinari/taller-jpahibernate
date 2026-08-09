@@ -1,0 +1,9 @@
+- JPA: Java Persistence API
+- Contexto de Persistencia:
+-- Donde la magia ocurre (la persistencia por alcance).
+- Estados: Transient, Managed/Persistente, Detached, Removed
+- Persistencia por Alcance: Si vinculo un objeto transient a una instancia persistente, el objeto transient se vuelve persistente
+
+Object Relational Mapping (ORM) / Ayuda a gestionar la Impedancia entre el modelo de objetos y el modelo relacional
+- Entidades --> Mapeos
+--> Requiere Identificador, Constructor sin argumentos, Getters y Setters

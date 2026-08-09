@@ -3,6 +3,7 @@ package orm.mappings.manytoone;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,8 +17,12 @@ public class Libro {
     @Id
     private String isbn;
     private String titulo;
-    //@OneToOne: el id_autor va en Libro y con restriccion de unidad
-    @ManyToOne //el id_autor va en Libro, sin restriccion de unicidad
+
+    //@OneToOne
+    //@OneToOne: el id_autor va en Libro y con restriccion de unidad. El autor puede ser autor de 1 solo libro.
+    @ManyToOne
+    //@ManyToOne: el id_autor va en Libro, sin restriccion de unicidad
+    //@ManyToOne: el mismo autor puede ser autor de varios libros
     private Autor autor;
 
     public Libro(String isbn, String titulo, Autor autor) {
