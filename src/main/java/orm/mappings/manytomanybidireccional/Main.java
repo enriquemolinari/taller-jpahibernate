@@ -18,6 +18,8 @@ public class Main {
             libro.agregarAutor(jose);
             em.persist(libro);
         });
+
+        System.out.println("");
     }
 
 }
