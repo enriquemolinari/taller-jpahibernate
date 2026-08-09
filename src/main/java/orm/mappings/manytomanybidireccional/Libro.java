@@ -18,7 +18,9 @@ public class Libro {
     @Id
     private String isbn;
     private String titulo;
-    //para que es el mappedby?
+
+    //para que es el mappedby? Necesario en las relaciones bidireccionales
+
     //1. Si no pongo el mappedBy, Hibernate crea dos tablas relacionadas.
     //2. Si agrego el mappedBy crea solo una tabla para la relacion entre Libros y Autores.
     //Pero, para que se persista esa relacion tengo que desde autores agregarle el libro.

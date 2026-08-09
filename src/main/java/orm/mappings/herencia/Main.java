@@ -28,5 +28,14 @@ public class Main {
             em.persist(libro);
             em.persist(libroe);
         });
+
+        emf.runInTransaction((em) -> {
+            //¿Cómo sabe que instancia de Libro darme?
+            //Observar la query realizada con SINGLE_TABLE vs JOINED vs TABLE per Concrete Class
+            var libros = em.createQuery("SELECT l FROM Libro l", Libro.class).getResultList();
+            libros.stream().forEach(libro -> {
+                System.out.println(libro);
+            });
+        });
     }
 }

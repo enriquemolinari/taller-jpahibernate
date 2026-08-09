@@ -29,4 +29,14 @@ public class LibroElectronico extends Libro {
     public String peso() {
         return this.pesoDescarga;
     }
+
+    @Override
+    public String toString() {
+        return "LibroElectronico{" +
+                "nombre= " + this.nombre() +
+                ", autores= " + this.autores() +
+                ", formato= " + this.formato +
+                ", pesoDescarga= " + this.pesoDescarga +
+                '}';
+    }
 }

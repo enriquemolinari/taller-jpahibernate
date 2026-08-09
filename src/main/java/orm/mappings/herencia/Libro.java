@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Inheritance
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "tipo_libro")
 //@Setter(AccessLevel.PRIVATE)
 //@Getter(AccessLevel.PRIVATE)

@@ -25,4 +25,13 @@ public class LibroImpreso extends Libro {
     public String ficha() {
         return this.fichaFisica.toString();
     }
+
+    @Override
+    public String toString() {
+        return "LibroImpreso{" +
+                "nombre= " + this.nombre() +
+                ", autores= " + this.autores() +
+                "fichaFisica=" + fichaFisica +
+                '}';
+    }
 }
