@@ -3,13 +3,18 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BackgroundAgentGlobalSettings">
+    <option name="selectedModelId" value="auto" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a785135-348f-455c-b2fc-aa062c3f9f07" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="2a785135-348f-455c-b2fc-aa062c3f9f07" name="Changes" comment="moving to hibernate 7.4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/orm/context/JdbcMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/orm/context/entities/Autor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/orm/context/entities/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orm/context/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/context/Autor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orm/context/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/context/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orm/context/MainSimplificado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/context/MainSimplificado.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +25,13 @@
     <persistenceIdMap>
       <entry key="_/home/enrique/workspaces/taller-jpahibernate" value="3Heh4Rixwwqx04wQBLaFvfbpnKv" />
     </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +60,21 @@
   "fromUser": false
 }]]></component>
   <component name="ProjectId" id="3Heh4Ayiaw0GPT3mI2GAmGIpwkv" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,6 +82,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.MainSimplificado.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -64,15 +92,42 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/enrique/workspaces/taller-jpahibernate",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="orm.context.entities" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration name="MainSimplificado" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="orm.context.MainSimplificado" />
+      <module name="ar.jpahibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="orm.context.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="taller-jpahibernate" />
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainSimplificado" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -90,9 +145,22 @@
       <option name="presentableId" value="Default" />
       <updated>1786234249499</updated>
     </task>
+    <task id="LOCAL-00001" summary="moving to hibernate 7.4">
+      <option name="closed" value="true" />
+      <created>1786234568897</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1786234568897</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="moving to hibernate 7.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="moving to hibernate 7.4" />
   </component>
 </project>

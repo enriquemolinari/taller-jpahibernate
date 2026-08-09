@@ -1,11 +1,24 @@
-package orm.context;
+package orm.context.entities;
+
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Setter(AccessLevel.PRIVATE)
+@Getter(AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Libro {
+    @Id
     private String isbn;
     private String titulo;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "isbn")
     private List<Autor> autores;
 
     public Libro(String isbn, String titulo) {
@@ -22,12 +35,8 @@ public class Libro {
         return this.autores.size();
     }
 
-    String isbn() {
-        return this.isbn;
-    }
-
-    public void agregarAutor(Autor autor) {
-        this.autores.add(autor);
+    public void agregarAutor(Autor unAutor) {
+        this.autores.add(unAutor);
     }
 
     public String[] autores() {

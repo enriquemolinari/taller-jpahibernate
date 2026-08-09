@@ -4,6 +4,8 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceConfiguration;
 import org.hibernate.cfg.JdbcSettings;
 import org.hibernate.tool.schema.Action;
+import orm.context.entities.Libro;
+import orm.context.entities.Autor;
 
 public class MainSimplificado {
     public static final String IN_MEMORY_DB_URL = "jdbc:derby:memory:ejemplo;create=true";
@@ -15,13 +17,15 @@ public class MainSimplificado {
         var emf = createEmf();
 
         emf.runInTransaction((em) -> {
-            var antonio = new Autor("Antonio", "Zarate");
-            //antonio es transient ahora
-            em.persist(antonio);
-            //antonio es persistent ahora
-            var libro = new Libro("abcd-1234", "La casa y el bosque");
+            var kent = new Autor("Kent", "Beck");
+            var libro = new Libro("978-0132350884", "Smalltalk Best Practices Patterns");
+            libro.agregarAutor(kent);
             em.persist(libro);
-            //libro es persistent ahora
+        });
+
+        emf.runInTransaction((em) -> {
+            var smalltalkLibro = em.find(Libro.class, "978-0132350884");
+            smalltalkLibro.agregarAutor(new Autor("Otro", "Autor"));
         });
     }
 
