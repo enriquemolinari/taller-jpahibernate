@@ -18,3 +18,9 @@ ALTER DATABASE postgres SET DEFAULT_TRANSACTION_ISOLATION TO 'serializable';
 ALTER DATABASE postgres SET DEFAULT_TRANSACTION_ISOLATION TO 'repeatable read';
 ALTER DATABASE postgres SET DEFAULT_TRANSACTION_ISOLATION TO 'read committed';
 -- para ver el cambio en el cliente BD necesito reconectarme.
+
+Lazy / getReference
+
+El debuguer de IntelliJ por defecto popula objetos cuando invocas a getReference y tambien las collections lazy.
+Para deshabilitar esto en settings -> build, execution, deployment -> debugger -> data views -> Java -> Enable to toString in Object View (Destildar)
+y Enable alternative view for collections classes (Destildar)

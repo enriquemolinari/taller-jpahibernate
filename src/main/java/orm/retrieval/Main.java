@@ -1,6 +1,7 @@
 package orm.retrieval;
 
 import jakarta.persistence.EntityManagerFactory;
+import org.hibernate.Hibernate;
 import orm.utils.EmfBuilder;
 
 import java.time.LocalDateTime;
@@ -12,20 +13,20 @@ public class Main {
 
         cargoDatos(emf);
 
-        //Lazy vs Early
+        //Lazy (Proxy) vs Early
         //find()
         emf.runInTransaction((em) -> {
             var libro = em.find(Libro.class, "abcd-1234");
+            //No trae los autores. El debugger puede hacer que intellij haga que se dispare la query para mostrar el size de la collection.
             System.out.println(libro.titulo());
             System.out.println(libro.autores());
         });
 
         //Como agrego un Autor a un Libro ?
         //getReferece opmtimiza estas acciones
+        //NO realiza la SQL query para traer Libro (ojo el Debuguer del IDE puede ocasionar el fetch de la entidad)
         emf.runInTransaction((em) -> {
             //var libro = em.find(Libro.class, "abcd-1234");
-            // no inicializa libro, pero verifica que exista el ID
-            // A menos que el ID este en cache
             var libro = em.getReference(Libro.class, "abcd-1234");
             var autor = new Autor("Nuevo", "Autor");
             libro.agregarAutor(autor);
@@ -37,17 +38,17 @@ public class Main {
             // libro es persistent ahora
         });
         // libro esta en estado detached ahora. Que pasa con esto?
-        System.out.println(libro.autores());
+        //System.out.println(libro.autores());
 
-        //Detached: Solunciones
+        //Detached: Soluciones
         var libro2 = emf.callInTransaction((em) -> {
             var l = em.find(Libro.class, "abcd-1234");
             // libro es persistent ahora
 
             //opciones para inicializar atributos lazy
-            //1. Hibernate.initialize(l.autores()); // no me gusta demasiado
+           // Hibernate.initialize(l.autores()); // no me gusta demasiado
             //2. Cambiar Fetch en el mapeo. Pero queda para siempre asi, no importa el caso de uso.
-            //3. Query, segun si lo necesito fetcheo o no.
+            //3. Cambiar el find por una Query join fetch.
             //4. toRecord method
             //return l.toRecord();
             return l;

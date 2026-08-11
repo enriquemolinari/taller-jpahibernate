@@ -13,7 +13,6 @@ import java.util.List;
 @Setter(AccessLevel.PRIVATE)
 @Getter(AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Cacheable
 public class Libro {
     @Id
     private String isbn;
