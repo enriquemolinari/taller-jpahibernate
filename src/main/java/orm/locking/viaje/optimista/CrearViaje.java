@@ -9,6 +9,7 @@ public class CrearViaje {
     public static void main(String[] args) {
         var emf = new EmfBuilder()
                 .postgreSqlCredentials()
+                .withSchema(EmpresaComarca.SCHEMA)
                 .addClass(Viaje.class)
                 .addClass(Butaca.class)
                 .addClass(Pasaje.class)
