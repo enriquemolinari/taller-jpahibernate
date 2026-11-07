@@ -7,13 +7,11 @@
     <option name="selectedModelId" value="auto" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a785135-348f-455c-b2fc-aa062c3f9f07" name="Changes" comment="mas mejoras">
+    <list default="true" id="2a785135-348f-455c-b2fc-aa062c3f9f07" name="Changes" comment="agrego nombre de esquema">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/Butaca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/Butaca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/ComprarViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/ComprarViaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/CrearViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/CrearViaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/EmpresaComarca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/EmpresaComarca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/utils/EmfBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/utils/EmfBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/ComprarViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/ComprarViaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/ComprarViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/ComprarViaje.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +52,65 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0000000000009348" />
+      <entry key="M10" value="1.0000029005747857" />
+      <entry key="M15" value="1.000423061477762" />
+      <entry key="M30" value="1.061705370277323" />
+      <entry key="H1" value="1.7452169559192878" />
+      <entry key="H2" value="3.5897784730641273" />
+      <entry key="H4" value="5.827836596469487" />
+      <entry key="D1" value="9.112614726703766" />
+      <entry key="W1" value="9.867521958777477" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="4.7492917354115494E-4" />
+      <entry key="MS500" value="0.21643414137991457" />
+      <entry key="S2" value="0.6820739174396773" />
+      <entry key="S5" value="0.8580894786441964" />
+      <entry key="S10" value="0.9263311927405858" />
+      <entry key="S30" value="0.9748147595453573" />
+      <entry key="S60" value="0.9873270783004776" />
+      <entry key="M2" value="0.99364333555883" />
+      <entry key="M5" value="0.9974524688555806" />
+      <entry key="M10" value="0.998728322690563" />
+      <entry key="M15" value="0.9995731586870236" />
+      <entry key="M30" value="1.061280066415774" />
+      <entry key="H1" value="1.7450028193170466" />
+      <entry key="H2" value="3.5896694261208344" />
+      <entry key="H4" value="5.8277808745859225" />
+      <entry key="D1" value="9.11260514671368" />
+      <entry key="W1" value="9.867520580589039" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
   &quot;fromUser&quot;: false
@@ -86,6 +143,8 @@
     "Application.Main.executor": "Run",
     "Application.MainSimplificado.executor": "Debug",
     "Application.Queries.executor": "Debug",
+    "Application.orm.locking.viaje.pesimista.ComprarViaje.executor": "Debug",
+    "Application.orm.locking.viaje.pesimista.CrearViaje.executor": "Run",
     "Application.orm.mappings.components.Main.executor": "Run",
     "Application.orm.mappings.herencia.Main.executor": "Run",
     "Application.orm.mappings.manytomanybidireccional.Main.executor": "Run",
@@ -113,7 +172,7 @@
       <recent name="orm.context.entities" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ComprarViaje">
+  <component name="RunManager" selected="Application.orm.locking.viaje.pesimista.ComprarViaje">
     <configuration name="ComprarViaje" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="orm.locking.viaje.ComprarViaje" />
       <module name="ar.jpahibernate" />
@@ -155,12 +214,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="orm.mappings.herencia.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="orm.mappings.herencia.Main" />
+    <configuration name="orm.locking.viaje.pesimista.ComprarViaje" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="orm.locking.viaje.pesimista.ComprarViaje" />
       <module name="ar.jpahibernate" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="orm.mappings.herencia.*" />
+          <option name="PATTERN" value="orm.locking.viaje.pesimista.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,12 +227,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="orm.retrieval.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="orm.retrieval.Main" />
+    <configuration name="orm.locking.viaje.pesimista.CrearViaje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="orm.locking.viaje.pesimista.CrearViaje" />
       <module name="ar.jpahibernate" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="orm.retrieval.*" />
+          <option name="PATTERN" value="orm.locking.viaje.pesimista.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -187,19 +246,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.orm.locking.viaje.pesimista.ComprarViaje" />
+      <item itemvalue="Application.orm.locking.viaje.pesimista.CrearViaje" />
       <item itemvalue="Application.ComprarViaje" />
       <item itemvalue="Application.CrearViaje" />
-      <item itemvalue="Application.orm.mappings.herencia.Main" />
-      <item itemvalue="Application.orm.retrieval.Main" />
       <item itemvalue="Application.Queries" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.orm.locking.viaje.pesimista.ComprarViaje" />
+        <item itemvalue="Application.orm.locking.viaje.pesimista.CrearViaje" />
         <item itemvalue="Application.ComprarViaje" />
         <item itemvalue="Application.CrearViaje" />
         <item itemvalue="Application.Queries" />
-        <item itemvalue="Application.orm.retrieval.Main" />
-        <item itemvalue="Application.orm.mappings.herencia.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786406486794</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="agrego nombre de esquema">
+      <option name="closed" value="true" />
+      <created>1794075161197</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1794075161197</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +353,8 @@
     <MESSAGE value="mejorando la primera parte de la clase" />
     <MESSAGE value="ya no tiene sentido mostrar esto me parece ..." />
     <MESSAGE value="mas mejoras" />
-    <option name="LAST_COMMIT_MESSAGE" value="mas mejoras" />
+    <MESSAGE value="agrego nombre de esquema" />
+    <option name="LAST_COMMIT_MESSAGE" value="agrego nombre de esquema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -308,13 +376,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/orm/locking/viaje/ComprarViaje.java</url>
-          <line>19</line>
+          <line>15</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/orm/locking/viaje/EmpresaComarca.java</url>
           <line>41</line>
-          <option name="timeStamp" value="34" />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/EmpresaComarca.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/ComprarViaje.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
