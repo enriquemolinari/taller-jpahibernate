@@ -3,6 +3,8 @@ package orm.utils;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceConfiguration;
 import org.hibernate.cfg.JdbcSettings;
+import org.hibernate.cfg.MappingSettings;
+import org.hibernate.cfg.SchemaToolingSettings;
 import org.hibernate.tool.schema.Action;
 
 public class EmfBuilder {
@@ -47,6 +49,14 @@ public class EmfBuilder {
     public EmfBuilder memory() {
         config.property(PersistenceConfiguration.JDBC_URL,
                 IN_MEMORY_DB_URL);
+        return this;
+    }
+
+    public EmfBuilder withSchema(String schema) {
+        // todas las tablas y secuencias se crean/consultan en este esquema
+        config.property(MappingSettings.DEFAULT_SCHEMA, schema);
+        // Hibernate ejecuta "create schema" antes de crear las tablas
+        config.property(SchemaToolingSettings.JAKARTA_HBM2DDL_CREATE_SCHEMAS, true);
         return this;
     }
 

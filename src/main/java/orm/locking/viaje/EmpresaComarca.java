@@ -9,6 +9,7 @@ import java.util.List;
 //Clase que representa la empresa de transporte.
 //asumamos que solo tiene 1 colectivo
 public class EmpresaComarca {
+    public static final String SCHEMA = "viajes";
     private EntityManagerFactory emf;
 
     public EmpresaComarca(EntityManagerFactory emf) {

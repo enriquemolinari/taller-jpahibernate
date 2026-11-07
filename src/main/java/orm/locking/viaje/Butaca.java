@@ -27,9 +27,9 @@ public class Butaca {
     }
 
     public void ocupar(String nombrePasajero) {
-        if (this.ocupada) {
-            throw new IllegalStateException("La butaca " + numeroButaca + " ya está ocupada.");
-        }
+//        if (this.ocupada) {
+//            throw new IllegalStateException("La butaca " + numeroButaca + " ya está ocupada.");
+//        }
         this.ocupada = true;
         this.nombrePasajero = nombrePasajero;
     }
