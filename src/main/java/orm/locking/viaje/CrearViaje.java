@@ -16,7 +16,7 @@ public class CrearViaje {
                 .build();
         var empresa = new EmpresaComarca(emf);
         empresa.nuevoViaje(1L,
-                LocalDate.of(2025, 12, 20),
+                LocalDate.now().plusMonths(1),
                 LocalTime.of(10, 0));
     }
 }

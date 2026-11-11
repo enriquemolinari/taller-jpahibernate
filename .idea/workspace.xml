@@ -7,9 +7,11 @@
     <option name="selectedModelId" value="auto" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a785135-348f-455c-b2fc-aa062c3f9f07" name="Changes" comment="comentarios que ayudan a la explicacion">
+    <list default="true" id="2a785135-348f-455c-b2fc-aa062c3f9f07" name="Changes" comment="cambios que ayudan a la explicacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/ComprarViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/ComprarViaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/CrearViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/CrearViaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/CrearViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/CrearViaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/CrearViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/CrearViaje.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,61 +54,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000000075444977" />
-      <entry key="MS500" value="1.0397358495337972" />
-      <entry key="S2" value="1.910120335051713" />
-      <entry key="S5" value="3.1450071356584193" />
-      <entry key="S10" value="3.9150919091035576" />
-      <entry key="S30" value="4.595926935408441" />
-      <entry key="S60" value="4.792415594705936" />
-      <entry key="M2" value="4.9692187716606675" />
-      <entry key="M5" value="7.155774410447135" />
-      <entry key="M10" value="12.514716513708255" />
-      <entry key="M15" value="16.68522134813896" />
-      <entry key="M30" value="23.546488842452455" />
-      <entry key="H1" value="29.0128712250651" />
-      <entry key="H2" value="33.679660671420706" />
-      <entry key="H4" value="37.60380140969925" />
-      <entry key="D1" value="42.67973573966916" />
-      <entry key="W1" value="43.80366735368637" />
+      <entry key="MS100" value="0.0017972415051267095" />
+      <entry key="MS500" value="0.2824368036425309" />
+      <entry key="S2" value="0.7290046894135247" />
+      <entry key="S5" value="0.8812901295473452" />
+      <entry key="S10" value="0.9532848867749297" />
+      <entry key="S30" value="1.6752898978329527" />
+      <entry key="S60" value="3.0399012302858477" />
+      <entry key="M2" value="5.226878644237576" />
+      <entry key="M5" value="9.595415752986765" />
+      <entry key="M10" value="15.6788297084527" />
+      <entry key="M15" value="20.394608443624826" />
+      <entry key="M30" value="28.502233873722993" />
+      <entry key="H1" value="35.12777838931039" />
+      <entry key="H2" value="40.58514102306717" />
+      <entry key="H4" value="44.99396796383778" />
+      <entry key="D1" value="50.564767041916795" />
+      <entry key="W1" value="51.78682357914496" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000000007278513" />
+      <entry key="S5" value="1.000405121289402" />
+      <entry key="S10" value="1.0430515503146292" />
+      <entry key="S30" value="2.2609510262846593" />
+      <entry key="S60" value="4.125738509724122" />
+      <entry key="M2" value="5.980057174715425" />
+      <entry key="M5" value="7.611725334578955" />
+      <entry key="M10" value="8.27160066546854" />
+      <entry key="M15" value="8.50643821067462" />
+      <entry key="M30" value="8.749147012713472" />
+      <entry key="H1" value="8.873538048612335" />
+      <entry key="H2" value="8.936507946942335" />
+      <entry key="H4" value="8.968188425385577" />
+      <entry key="D1" value="8.994688943238302" />
+      <entry key="W1" value="8.999241053760475" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9075192257098132" />
-      <entry key="MS500" value="1.0196177028067295" />
-      <entry key="S2" value="1.8270075713591019" />
-      <entry key="S5" value="3.018086541214285" />
-      <entry key="S10" value="3.814380265452938" />
-      <entry key="S30" value="4.5501267001411305" />
-      <entry key="S60" value="4.767658753238718" />
-      <entry key="M2" value="4.956344247585753" />
-      <entry key="M5" value="7.150435995448408" />
-      <entry key="M10" value="12.511861230865447" />
-      <entry key="M15" value="16.683190814810473" />
-      <entry key="M30" value="23.545347621525487" />
-      <entry key="H1" value="29.01224711499651" />
-      <entry key="H2" value="33.67932980443362" />
-      <entry key="H4" value="37.60362989971892" />
-      <entry key="D1" value="42.67970609971717" />
-      <entry key="W1" value="43.8036630896461" />
+      <entry key="MS100" value="0.0021973821145220432" />
+      <entry key="MS500" value="0.3126816123707816" />
+      <entry key="S2" value="1.1059592007273071" />
+      <entry key="S5" value="1.5566310543320703" />
+      <entry key="S10" value="1.806566121637483" />
+      <entry key="S30" value="3.7516682512764024" />
+      <entry key="S60" value="6.9805255065986795" />
+      <entry key="M2" value="11.066810701339671" />
+      <entry key="M5" value="17.13325445346594" />
+      <entry key="M10" value="23.90954325344974" />
+      <entry key="M15" value="28.872748190721047" />
+      <entry key="M30" value="37.23661963446243" />
+      <entry key="H1" value="43.993752012438165" />
+      <entry key="H2" value="49.51781370059126" />
+      <entry key="H4" value="53.960223838851896" />
+      <entry key="D1" value="59.55913158017211" />
+      <entry key="W1" value="60.78601822827356" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -172,7 +174,7 @@
       <recent name="orm.context.entities" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ComprarViaje">
+  <component name="RunManager" selected="Application.CrearViaje">
     <configuration name="ComprarViaje" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="orm.locking.viaje.ComprarViaje" />
       <module name="ar.jpahibernate" />
@@ -252,8 +254,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ComprarViaje" />
         <item itemvalue="Application.CrearViaje" />
+        <item itemvalue="Application.ComprarViaje" />
         <item itemvalue="Application.orm.locking.viaje.optimista.ComprarViaje" />
         <item itemvalue="Application.orm.locking.viaje.optimista.CrearViaje" />
         <item itemvalue="Application.orm.locking.viaje.pesimista.ComprarViaje" />
@@ -371,7 +373,8 @@
     <MESSAGE value="saco el parametro por argumento para simplificar" />
     <MESSAGE value="inicializo con schema" />
     <MESSAGE value="comentarios que ayudan a la explicacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="comentarios que ayudan a la explicacion" />
+    <MESSAGE value="cambios que ayudan a la explicacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios que ayudan a la explicacion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
