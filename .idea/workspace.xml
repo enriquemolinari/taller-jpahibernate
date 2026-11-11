@@ -7,14 +7,9 @@
     <option name="selectedModelId" value="auto" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a785135-348f-455c-b2fc-aa062c3f9f07" name="Changes" comment="saco el parametro por argumento para simplificar">
+    <list default="true" id="2a785135-348f-455c-b2fc-aa062c3f9f07" name="Changes" comment="inicializo con schema">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/ComprarViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/ComprarViaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/CrearViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/CrearViaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/EmpresaComarca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/EmpresaComarca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/ComprarViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/ComprarViaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/CrearViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/CrearViaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/EmpresaComarca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/pesimista/EmpresaComarca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/ComprarViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/orm/locking/viaje/ComprarViaje.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,23 +52,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.1352527193367892" />
-      <entry key="MS500" value="2.228264983993239" />
-      <entry key="S2" value="5.217721821602413" />
-      <entry key="S5" value="7.815519943586576" />
-      <entry key="S10" value="9.202773917670422" />
-      <entry key="S30" value="10.363153076713294" />
-      <entry key="S60" value="10.791089724037898" />
-      <entry key="M2" value="11.184266574619338" />
-      <entry key="M5" value="11.591330290825542" />
-      <entry key="M10" value="11.777902856603221" />
-      <entry key="M15" value="11.847984216942638" />
-      <entry key="M30" value="11.97911349306656" />
-      <entry key="H1" value="12.679970912606946" />
-      <entry key="H2" value="14.525143836273338" />
-      <entry key="H4" value="16.77603829460151" />
-      <entry key="D1" value="20.099201615216632" />
-      <entry key="W1" value="20.865448597942596" />
+      <entry key="MS100" value="1.1603921452052877" />
+      <entry key="MS500" value="2.083782632116142" />
+      <entry key="S2" value="3.8991521544279957" />
+      <entry key="S5" value="4.95215970533044" />
+      <entry key="S10" value="5.432209846433248" />
+      <entry key="S30" value="5.7999081690862635" />
+      <entry key="S60" value="5.89943004392415" />
+      <entry key="M2" value="6.0512451074673566" />
+      <entry key="M5" value="7.752503160493488" />
+      <entry key="M10" value="10.596098336673194" />
+      <entry key="M15" value="12.32948913202444" />
+      <entry key="M30" value="14.756928369205504" />
+      <entry key="H1" value="16.841718859533405" />
+      <entry key="H2" value="19.431267591039063" />
+      <entry key="H4" value="22.132066709814435" />
+      <entry key="D1" value="25.96852300469533" />
+      <entry key="W1" value="26.84601475482725" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -95,23 +90,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1041577536719986" />
-      <entry key="MS500" value="2.214812427773284" />
-      <entry key="S2" value="5.208466181895205" />
-      <entry key="S5" value="7.809792510361003" />
-      <entry key="S10" value="9.199374384153314" />
-      <entry key="S30" value="10.361483082814306" />
-      <entry key="S60" value="10.788852016814673" />
-      <entry key="M2" value="11.181688499328615" />
-      <entry key="M5" value="11.589515519651933" />
-      <entry key="M10" value="11.77680007423659" />
-      <entry key="M15" value="11.847199199646289" />
-      <entry key="M30" value="11.978694030954333" />
-      <entry key="H1" value="12.679752731031357" />
-      <entry key="H2" value="14.525030988033109" />
-      <entry key="H4" value="16.77598021480148" />
-      <entry key="D1" value="20.099191575759594" />
-      <entry key="W1" value="20.86544715242071" />
+      <entry key="MS100" value="1.1120740280507602" />
+      <entry key="MS500" value="2.0660853204430714" />
+      <entry key="S2" value="3.891392179130271" />
+      <entry key="S5" value="4.948313155539653" />
+      <entry key="S10" value="5.430119217495808" />
+      <entry key="S30" value="5.799168775290763" />
+      <entry key="S60" value="5.899054472028838" />
+      <entry key="M2" value="6.05103237231817" />
+      <entry key="M5" value="7.7521495600806665" />
+      <entry key="M10" value="10.595628970933173" />
+      <entry key="M15" value="12.329043912863478" />
+      <entry key="M30" value="14.75660891432317" />
+      <entry key="H1" value="16.84152592665692" />
+      <entry key="H2" value="19.431160058127602" />
+      <entry key="H4" value="22.13200926964426" />
+      <entry key="D1" value="25.96851276573508" />
+      <entry key="W1" value="26.846013272830533" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -139,49 +134,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ComprarViaje.executor": "Debug",
-    "Application.CrearViaje.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainSimplificado.executor": "Debug",
-    "Application.Queries.executor": "Debug",
-    "Application.orm.locking.viaje.optimista.ComprarViaje.executor": "Debug",
-    "Application.orm.locking.viaje.optimista.CrearViaje.executor": "Run",
-    "Application.orm.locking.viaje.pesimista.ComprarViaje.executor": "Debug",
-    "Application.orm.locking.viaje.pesimista.CrearViaje.executor": "Run",
-    "Application.orm.mappings.components.Main.executor": "Run",
-    "Application.orm.mappings.herencia.Main.executor": "Run",
-    "Application.orm.mappings.manytomanybidireccional.Main.executor": "Run",
-    "Application.orm.mappings.onetomany.Main.executor": "Run",
-    "Application.orm.retrieval.Main.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "copilot.chat.legacySessionMetadata.migrated": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/enrique/workspaces/taller-jpahibernate",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Debugger_Data_Views_Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ComprarViaje.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.CrearViaje.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainSimplificado.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Queries.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.orm.locking.viaje.optimista.ComprarViaje.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.orm.locking.viaje.optimista.CrearViaje.executor&quot;: &quot;Run&quot;,
+    &quot;Application.orm.locking.viaje.pesimista.ComprarViaje.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.orm.locking.viaje.pesimista.CrearViaje.executor&quot;: &quot;Run&quot;,
+    &quot;Application.orm.mappings.components.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.orm.mappings.herencia.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.orm.mappings.manytomanybidireccional.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.orm.mappings.onetomany.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.orm.retrieval.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/enrique/workspaces/taller-jpahibernate&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Debugger_Data_Views_Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="orm.context.entities" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.orm.locking.viaje.optimista.ComprarViaje">
-    <configuration name="ComprarViaje" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="orm.locking.viaje.ComprarViaje" />
+  <component name="RunManager" selected="Application.CrearViaje">
+    <configuration name="CrearViaje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="orm.locking.viaje.CrearViaje" />
       <module name="ar.jpahibernate" />
-      <option name="PROGRAM_PARAMETERS" value="Enrique" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="orm.locking.viaje.*" />
@@ -250,27 +244,27 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.CrearViaje" />
       <item itemvalue="Application.orm.locking.viaje.optimista.ComprarViaje" />
       <item itemvalue="Application.orm.locking.viaje.optimista.CrearViaje" />
       <item itemvalue="Application.orm.locking.viaje.pesimista.ComprarViaje" />
       <item itemvalue="Application.orm.locking.viaje.pesimista.CrearViaje" />
-      <item itemvalue="Application.ComprarViaje" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CrearViaje" />
         <item itemvalue="Application.orm.locking.viaje.optimista.ComprarViaje" />
         <item itemvalue="Application.orm.locking.viaje.optimista.CrearViaje" />
         <item itemvalue="Application.orm.locking.viaje.pesimista.ComprarViaje" />
         <item itemvalue="Application.orm.locking.viaje.pesimista.CrearViaje" />
-        <item itemvalue="Application.ComprarViaje" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+        <option value="bundled-jdk-30f59d01ecdd-2df11533d9fe-intellij.indexing.shared.core-IU-262.11879.100" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.11879.100" />
       </set>
     </attachedChunks>
   </component>
@@ -354,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794088278376</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="inicializo con schema">
+      <option name="closed" value="true" />
+      <created>1794089091318</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1794089091318</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +369,8 @@
     <MESSAGE value="mas mejoras" />
     <MESSAGE value="agrego nombre de esquema" />
     <MESSAGE value="saco el parametro por argumento para simplificar" />
-    <option name="LAST_COMMIT_MESSAGE" value="saco el parametro por argumento para simplificar" />
+    <MESSAGE value="inicializo con schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="inicializo con schema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -388,11 +391,6 @@
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/orm/locking/viaje/ComprarViaje.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/orm/locking/viaje/EmpresaComarca.java</url>
           <line>41</line>
           <option name="timeStamp" value="35" />
@@ -411,11 +409,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/ComprarViaje.java</url>
           <line>16</line>
           <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/orm/locking/viaje/optimista/EmpresaComarca.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
